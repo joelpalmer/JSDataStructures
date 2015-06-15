@@ -75,3 +75,11 @@ function musicalChairs(players, num) {
 var players = ['Mary', 'Zooey', 'Amanda', 'Joel', 'Michelle'];
 var winner = musicalChairs(players, 5);
 console.log(winner + " wins");
+
+//Linked list runner
+
+var llist = new JSLinkedList();
+llist.append(11);
+llist.append(17);
+console.log(llist.toString());
+console.log(llist.count());
