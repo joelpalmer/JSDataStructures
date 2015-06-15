@@ -21,7 +21,7 @@ function JSStack(){
         return items.length == 0;
     };
 
-    this.size = function(){
+    this.count = function(){
         return items.length;
     };
 
