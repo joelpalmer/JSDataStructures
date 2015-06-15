@@ -13,7 +13,7 @@ function JSStack(){
         return items.pop();
     };
 
-    this.peek = function(){
+    this.top = function(){
         return items[items.length-1];
     };
 
