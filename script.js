@@ -49,3 +49,29 @@ console.log(queue.count());
 queue.dequeue(); //That's what I like about texas!
 queue.dequeue();
 queue.puts();
+
+//musical chairs with JSQueue --- Circular Queue
+
+function musicalChairs(players, num) {
+
+    var queue = new JSQueue();
+
+    for (var i = 0; i < players.length; i++) {
+        queue.enqueue(players[i]);
+    }
+
+    var eliminated = '';
+    while (queue.count() > 1) {
+        for (var i = 0; i < num; i++) {
+            queue.enqueue(queue.dequeue());
+        }
+        eliminated = queue.dequeue();
+        console.log(eliminated + ' is out.');
+    }
+
+    return queue.dequeue();
+}
+
+var players = ['Mary', 'Zooey', 'Amanda', 'Joel', 'Michelle'];
+var winner = musicalChairs(players, 5);
+console.log(winner + " wins");
