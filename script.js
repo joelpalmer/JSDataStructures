@@ -1,4 +1,6 @@
+//data structure run and test script
 
+//initial stack
 var stack = new JSStack();
 console.log(stack.isEmpty());
 stack.push(7);
