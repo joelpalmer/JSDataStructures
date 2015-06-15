@@ -29,8 +29,8 @@ function JSStack(){
         items = [];
     };
 
-    this.print = function(){
-        console.log(items.toString());
+    this.puts = function () {
+        console.log(items.toString() + "\n");
     };
 
 
