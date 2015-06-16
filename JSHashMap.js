@@ -25,7 +25,6 @@ function JSHashMap() {
 //TODO: Add collision avoidance with JSLinkedList or linear probing
     this.update = function (key, value) {
         var position = code(key);
-
         map[position] = value;
     };
 
