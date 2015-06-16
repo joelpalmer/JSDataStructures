@@ -102,3 +102,19 @@ console.log(set.values());
 
 set.delete(2001);
 console.log(set.values());
+
+//run/test JSSet union
+
+var set1 = new JSSet();
+set1.add(2);
+set1.add(3);
+set1.add(5);
+
+var set2 = new JSSet();
+set2.add(7);
+set2.add(11);
+set2.add(13);
+set2.add(17);
+
+var unionized = set1.union(set2);
+console.log(unionized.values());

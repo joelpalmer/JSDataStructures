@@ -47,5 +47,20 @@ function JSSet() {
         return Object.keys(items);
     };
 
+    //ops
+
+    this.union = function (other) {
+        var unionized = new JSSet();
+        var values = this.values();
+        for (var i = 0; i < values.length; i++) {
+            unionized.add(values[i]);
+        }
+        values = other.values();
+        for (var i = 0; i < values.length; i++) {
+            unionized.add(values[i]);
+        }
+        return unionized;
+    };
+
 
 }
