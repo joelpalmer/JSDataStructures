@@ -12,18 +12,18 @@ function JSLinkedList() {
 
     this.append = function (element) {
         var node = new Node(element);
-        var current;
+        var curr;
 
         if (head === null) {
             head = node;
         } else {
-            current = head;
+            curr = head;
 
-            while (current.next) {
-                current = current.next;
+            while (curr.next) {
+                curr = curr.next;
             }
 
-            current.next = node;
+            curr.next = node;
         }
 
         length++;
@@ -31,19 +31,19 @@ function JSLinkedList() {
     this.insert = function (position, element) {
         if (position >= 0 && position <= length) {
             var node = new Node(element);
-            var current = head;
+            var curr = head;
             var previous;
             var index = 0;
 
             if (position === 0) {
-                node.next = current;
+                node.next = curr;
                 head = node;
             } else {
                 while (index++ < position) {
-                    previous = current;
-                    current = current.next;
+                    previous = curr;
+                    curr = curr.next;
                 }
-                node.next = current;
+                node.next = curr;
                 previous.next = node;
             }
 
@@ -57,23 +57,23 @@ function JSLinkedList() {
 
     this.removeAt = function (position) {
         if (position > -1 && position < length) {
-            var current = head;
+            var curr = head;
             var previous;
             var index = 0;
 
             if (position === 0) {
-                head = current.next;
+                head = curr.next;
             } else {
                 while (index++ < position) {
-                    previous = current;
-                    current = current.next;
+                    previous = curr;
+                    curr = curr.next;
                 }
 
-                previous.next = current.next;
+                previous.next = curr.next;
             }
 
             length--;
-            return current.element;
+            return curr.element;
         } else {
             return null;
         }
@@ -85,15 +85,15 @@ function JSLinkedList() {
     }
 
     this.indexOf = function (element) {
-        var current = head;
+        var curr = head;
         var index = -1;
 
-        while (current) {
-            if (element === current.element) {
+        while (curr) {
+            if (element === curr.element) {
                 return index;
             }
             index++;
-            current = current.next;
+            curr = curr.next;
         }
         return -1;
     };
@@ -105,12 +105,12 @@ function JSLinkedList() {
         return length;
     };
     this.toString = function () {
-        var current = head;
+        var curr = head;
         var output = "";
 
-        while (current) {
-            output += "-" + current.element;
-            current = current.next;
+        while (curr) {
+            output += "-" + curr.element;
+            curr = curr.next;
         }
 
         return output;

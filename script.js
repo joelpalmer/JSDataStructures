@@ -83,3 +83,22 @@ llist.append(11);
 llist.append(17);
 console.log(llist.toString());
 console.log(llist.count());
+
+//initial set runner
+
+var set = new JSSet();
+set.add(42);
+console.log(set.values());
+console.log(set.has(42));
+console.log(set.size());
+
+set.add(2001);
+console.log(set.values());
+console.log(set.has(2001));
+console.log(set.size());
+
+set.delete(42);
+console.log(set.values());
+
+set.delete(2001);
+console.log(set.values());
