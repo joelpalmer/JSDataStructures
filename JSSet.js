@@ -83,4 +83,19 @@ function JSSet() {
         }
         return disparities;
     };
+
+    this.subset = function (other) {
+        if (this.size() > other.size()) {
+            return false;
+        } else {
+            var values = this.values();
+            for (var i = 0; i < values.length; i++) {
+                if (!other.has(values[i])) {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+    };
 }

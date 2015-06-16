@@ -148,3 +148,22 @@ set2.add("B");
 
 var disparities = set2.difference(set1);
 console.log(disparities.values());
+
+//run/test subset for JSSet
+
+var set1 = new JSSet();
+set1.add(1);
+set1.add(2);
+
+var set2 = new JSSet();
+set2.add(1);
+set2.add(2);
+set2.add(3);
+
+var set3 = new JSSet();
+set3.add(2);
+set3.add(3);
+set3.add(4);
+
+console.log(set1.subset(set2));
+console.log(set1.subset(set3));
