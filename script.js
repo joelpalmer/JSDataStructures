@@ -177,3 +177,13 @@ map.set('Mom', '1-800-Collect');
 console.log(map.has('Jenny'));
 console.log(map.size());
 console.log(map.entries());
+
+//JSHashMap run/test code
+var hash = new JSHashMap();
+hash.update('Jenny', '867-5309');
+hash.update('The Cops', '911');
+hash.update('Mom', '1-800-Collect');
+console.log(hash.getItem('Mom'));
+console.log(hash.getItem('Jenny'));
+hash.remove('Mom');
+console.log(hash.getItem('Mom'));
