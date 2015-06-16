@@ -71,7 +71,16 @@ function JSSet() {
             }
         }
         return intersected;
-    }
+    };
 
-
+    this.difference = function (other) {
+        var disparities = new JSSet();
+        var values = this.values();
+        for (var i = 0; i < values.length; i++) {
+            if (!other.has(values[i])) {
+                disparities.add(values[i]);
+            }
+        }
+        return disparities;
+    };
 }

@@ -133,3 +133,18 @@ set2.add("B");
 
 var intersected = set1.intersection(set2);
 console.log(intersected.values());
+
+//run/test JSSet difference
+
+var set1 = new JSSet();
+set1.add("B");
+set1.add("O");
+set1.add("B");
+
+var set2 = new JSSet();
+set2.add("R");
+set2.add("O");
+set2.add("B");
+
+var disparities = set2.difference(set1);
+console.log(disparities.values());
