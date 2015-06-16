@@ -5,12 +5,12 @@
 function JSHashMap() {
     var map = [];
 
-    var code = function (key) {
-        var hash = 0;
+    var djb2Code = function (key) {
+        var hash = 5381;
         for (var i = 0; i < key.length; i++) {
-            hash += key.charCodeAt(i);
+            hash = hash * 33 + key.charCodeAt(i);
         }
-        return hash % 37;
+        return hash % 1013;
 
     };
 
@@ -22,18 +22,18 @@ function JSHashMap() {
             return '[' + this.key + ' -> ' + this.value + ']';
         }
     };
-//TODO: Add collision avoidance with JSLinkedList or linear probing
+
     this.update = function (key, value) {
-        var position = code(key);
+        var position = djb2Code(key);
         map[position] = value;
     };
 
     this.getItem = function (key) {
-        return map[code(key)];
+        return map[djb2Code(key)];
     };
 
     this.remove = function (key) {
-        map[code(key)] = undefined;
+        map[djb2Code(key)] = undefined;
 
     };
 
