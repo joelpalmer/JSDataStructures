@@ -167,3 +167,13 @@ set3.add(4);
 
 console.log(set1.subset(set2));
 console.log(set1.subset(set3));
+
+//run/test code for JSMap
+
+var map = new JSMap();
+map.set('Jenny', '867-5309');
+map.set('The Cops', '911');
+map.set('Mom', '1-800-Collect');
+console.log(map.has('Jenny'));
+console.log(map.size());
+console.log(map.entries());
