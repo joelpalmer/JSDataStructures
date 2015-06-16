@@ -62,5 +62,16 @@ function JSSet() {
         return unionized;
     };
 
+    this.intersection = function (other) {
+        var intersected = new JSSet();
+        var values = this.values();
+        for (var i = 0; i < values.length; i++) {
+            if (other.has(values[i])) {
+                intersected.add(values[i]);
+            }
+        }
+        return intersected;
+    }
+
 
 }

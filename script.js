@@ -118,3 +118,18 @@ set2.add(17);
 
 var unionized = set1.union(set2);
 console.log(unionized.values());
+
+//run/test JSSet intersection
+
+var set1 = new JSSet();
+set1.add("B");
+set1.add("O");
+set1.add("B");
+
+var set2 = new JSSet();
+set2.add("R");
+set2.add("O");
+set2.add("B");
+
+var intersected = set1.intersection(set2);
+console.log(intersected.values());
