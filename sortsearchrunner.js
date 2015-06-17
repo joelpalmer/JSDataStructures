@@ -32,5 +32,10 @@ console.log(array.toString());
 
 array = nonSortedArray(5);
 console.log(array.toString());
-array.quickSort();
+array.qSort();
 console.log(array.toString());
+//searches
+//sequential search
+array = nonSortedArray(5);
+
+console.log(array.seqSearch(2));
