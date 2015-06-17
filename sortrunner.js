@@ -18,3 +18,19 @@ var array = nonSortedArray(11);
 console.log(array.toString());
 array.betterBubbleSort();
 console.log(array.toString());
+
+array = nonSortedArray(5);
+console.log(array.toString());
+array.selectionSort();
+console.log(array.toString());
+
+
+array = nonSortedArray(5);
+console.log(array.toString());
+array.mergeSort();
+console.log(array.toString());
+
+array = nonSortedArray(5);
+console.log(array.toString());
+array.quickSort();
+console.log(array.toString());
