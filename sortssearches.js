@@ -36,32 +36,32 @@ function JSArrayList() {
     };
 
     this.selectionSort = function () {
-        var length = array.length,            //{1}
+        var length = array.length,
             idxMin;
-        for (var i = 0; i < length - 1; i++) {       //{2}
-            idxMin = i;                     //{3}
-            for (var j = i; j < length; j++) {     //{4}
-                if (array[idxMin] > array[j]) { //{5}
-                    idxMin = j;             //{6}
+        for (var i = 0; i < length - 1; i++) {
+            idxMin = i;
+            for (var j = i; j < length; j++) {
+                if (array[idxMin] > array[j]) {
+                    idxMin = j;
                 }
             }
-            if (i !== idxMin) {              //{7}
+            if (i !== idxMin) {
                 swap(i, idxMin);
             }
         }
     };
 
     this.insertionSort = function () {
-        var length = array.length,            //{1}
+        var length = array.length,
             j, tmp;
-        for (var i = 1; i < length; i++) {         //{2}
-            j = i;                            //{3}
-            tmp = array[i];                  //{4}
-            while (j > 0 && array[j - 1] > tmp) { //{5}
-                array[j] = array[j - 1];        //{6}
+        for (var i = 1; i < length; i++) {
+            j = i;
+            tmp = array[i];
+            while (j > 0 && array[j - 1] > tmp) {
+                array[j] = array[j - 1];
                 j--;
             }
-            array[j] = tmp;                  //{7}
+            array[j] = tmp;
         }
     };
 
